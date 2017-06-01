@@ -3,8 +3,8 @@ package snake;
 import java.util.ArrayList;
 
 public class Snake{
-	private int[] location;   //int[0]´ú±íµÚ¼¸ÅÅ£¬int[1]´ú±íµÚ¼¸ÁĞ
-	//Ã¿³ÔÒ»¸öÊ³ÎïÉú³ÉÒ»¸ösnake¶ÔÏó£¬²¢´¢´æÔÚarrayÊı×éÖĞ
+	private int[] location;   //int[0]ä»£è¡¨ç¬¬å‡ æ’ï¼Œint[1]ä»£è¡¨ç¬¬å‡ åˆ—
+	//æ¯åƒä¸€ä¸ªé£Ÿç‰©ç”Ÿæˆä¸€ä¸ªsnakeå¯¹è±¡ï¼Œå¹¶å‚¨å­˜åœ¨arrayæ•°ç»„ä¸­
 	public static ArrayList<Snake> array=new ArrayList<Snake>();
 	public Snake(){
 		location=new int[]{GameMap.HEIGHT/2,GameMap.WIDTH/2};

@@ -1,4 +1,4 @@
-﻿package snake;
+package snake;
 public class GameMap{
 	private String[][] map;
 	public static final int HEIGHT=25;

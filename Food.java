@@ -2,7 +2,7 @@ package snake;
 public class Food{
 	private int[] location=new int[2];
 	/**
-	 * ´Ë·½·¨ÓÃÀ´Éú³ÉĞÂµÄÊ³Îï£¬ÇÒĞÂÉú³ÉµÄÊ³ÎïËùÔÚµÄÎ»ÖÃ²»ÄÜÔÚÉßµÄÉíÉÏ
+	 * æ­¤æ–¹æ³•ç”¨æ¥ç”Ÿæˆæ–°çš„é£Ÿç‰©ï¼Œä¸”æ–°ç”Ÿæˆçš„é£Ÿç‰©æ‰€åœ¨çš„ä½ç½®ä¸èƒ½åœ¨è›‡çš„èº«ä¸Š
 	 */
 	public void freshFood(){
 		boolean flage=true;
@@ -19,7 +19,7 @@ public class Food{
 			else flage=true;
 		}
 	}
-	//Éú³ÉÊ³Îï£¬×ø±êÅÅ³ıËÄÖÜµÄÇ½
+	//ç”Ÿæˆé£Ÿç‰©ï¼Œåæ ‡æ’é™¤å››å‘¨çš„å¢™
 	public void grown(){
 		location[0]=(int)(Math.random()*(GameMap.HEIGHT-1))+1;
 		location[1]=(int)(Math.random()*(GameMap.WIDTH-1))+1;

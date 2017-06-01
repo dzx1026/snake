@@ -1,7 +1,7 @@
 package snake;
 public class Game{
-	public final int END=0;              //´ú±íÓÎÏ·½áÊø
-	public final int CONTINUE=1;         //´ú±íÓÎÏ·¼¼Êõ
+	public final int END=0;              //ä»£è¡¨æ¸¸æˆç»“æŸ
+	public final int CONTINUE=1;         //ä»£è¡¨æ¸¸æˆæŠ€æœ¯
 	private Snake snake=new Snake();
 	private GameMap gameMap=new GameMap();
 	private Food food=new Food();
@@ -12,7 +12,7 @@ public class Game{
 		while(i<10){
 			game.start();
 			
-			//ÒòÎªjava³ÌĞò ²»ÄÜÇå¿Õ¿ØÖÆÌ¨£¬ÔİÊ±ÕâÃ´Ìæ´ú£¬ÒÔºóÓÃÍ¼ĞÎ½çÃæÌæ»»
+			//å› ä¸ºjavaç¨‹åº ä¸èƒ½æ¸…ç©ºæ§åˆ¶å°ï¼Œæš‚æ—¶è¿™ä¹ˆæ›¿ä»£ï¼Œä»¥åç”¨å›¾å½¢ç•Œé¢æ›¿æ¢
 			int j=0;
 			while(j<9){
 				System.out.println();
@@ -25,23 +25,23 @@ public class Game{
 
 	}
 	public void start(){
-		food.freshFood();      //Ê×ÏÈÉú³ÉÊ³Îï
+		food.freshFood();      //é¦–å…ˆç”Ÿæˆé£Ÿç‰©
 		
 		drawScreen();
 	}
 	/**
-	 * ÔÚÆÁÄ»ÉÏÏÔÊ¾µØÍ¼¡¢Ì°³ÔÉßºÍÊ³Îï
+	 * åœ¨å±å¹•ä¸Šæ˜¾ç¤ºåœ°å›¾ã€è´ªåƒè›‡å’Œé£Ÿç‰©
 	 */
 	public void drawScreen(){
-		String[][] map=gameMap.getMap();      //µØÍ¼
-		for(Snake s:Snake.array){             //·ÅÈëÉß
+		String[][] map=gameMap.getMap();      //åœ°å›¾
+		for(Snake s:Snake.array){             //æ”¾å…¥è›‡
 			int[] location=s.getLocation();
 			map[location[0]][location[1]]=" *";
 		}
-		//ÔÚµØÍ¼ÖĞ·ÅÈëÊ³Îï
+		//åœ¨åœ°å›¾ä¸­æ”¾å…¥é£Ÿç‰©
 		int[] foodLocation=food.getLocation();
 		map[foodLocation[0]][foodLocation[1]]=" *";
-		//Êä³öÆÁÄ»
+		//è¾“å‡ºå±å¹•
 		for(int i=0;i<map.length;i++){
 			for(int j=0;j<map[i].length;j++){
 				System.out.print(map[i][j]);
